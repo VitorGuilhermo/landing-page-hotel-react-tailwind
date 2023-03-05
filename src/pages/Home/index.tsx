@@ -1,3 +1,6 @@
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import { FormSearch } from './components/FormSearch'
+
 import backgroundImage from '../../assets/hero-image-1.png'
 import featuredImage from '../../assets/featured-img.png'
 import imageShadow from '../../assets/image-shadow.png'
@@ -7,37 +10,10 @@ import hotel3 from '../../assets/hotel-3.jpeg'
 import hotel4 from '../../assets/hotel-4.jpeg'
 
 
-import { 
-    AiOutlineSearch, 
-    AiOutlineArrowRight, 
-    AiOutlineFacebook, 
-    AiOutlineInstagram 
-} from 'react-icons/ai'
-
 export function Home() {
 
     return (
         <>
-            <header className='container max-w-5xl mx-auto px-4 h-24 flex items-center justify-between'>
-                <div className='font-black'>
-                    LOGO
-                </div>
-                <ul className='flex flex-items-center space-x-4'>
-                    <li>
-                        <a href="#" className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Como reservar</a>
-                    </li>
-                    <li>
-                        <a href="#" className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Sobre nós</a>
-                    </li>
-                    <li>
-                        <a href="#" className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Informações</a>
-                    </li>
-                    <li>
-                        <a href="#" className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Contato</a>
-                    </li>
-                </ul>
-            </header>
-
             <section
                 className='h-[450px]'
                 style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -49,26 +25,7 @@ export function Home() {
                             <p className='text-green-50'>Escolha o estado e cidade para achar os melhores resorts</p>
                         </div>
                         <div className='mt-7'>
-                            <form className='grid grid-cols-2 lg:grid-cols-3 gap-4'>
-                                <select name="" id=""
-                                    className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'
-                                >
-                                    <option value="">Escolha estado...</option>
-                                </select>
-
-                                <select name="" id=""
-                                    className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'
-                                >
-                                    <option value="">Escolha cidade</option>
-                                </select>
-
-                                <button
-                                    className='col-span-2 lg:col-span-1 inline-flex items-center justify-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded'
-                                >
-                                    <AiOutlineSearch size={18} />
-                                    <span className='ml-2'>Pesquisar resorts</span>                                
-                                </button>
-                            </form> 
+                            <FormSearch />
                         </div>
                     </div>
                 </div>
@@ -146,45 +103,9 @@ export function Home() {
 
             <div className='py-20'>
                 <div className='container max-w-5xl mx-auto px-4 flex justify-center'>
-                    <form className='grid grid-cols-2 lg:grid-cols-3 gap-4'>
-                        <select name="" id=""
-                            className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'
-                        >
-                            <option value="">Escolha estado...</option>
-                        </select>
-
-                        <select name="" id=""
-                            className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'
-                        >
-                            <option value="">Escolha cidade</option>
-                        </select>
-
-                        <button
-                            className='col-span-2 lg:col-span-1 inline-flex items-center justify-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded'
-                        >
-                            <AiOutlineSearch size={18} />
-                            <span className='ml-2'>Pesquisar resorts</span>
-                        </button>
-                    </form>
+                    <FormSearch />
                 </div>
             </div>
-
-            <footer className='border-t border-gray-200'>
-                <div className='container max-w-5xl mx-auto px-4 py-8 flex items-center justify-between'>
-                    <div className='text-gray-400 font-black'>
-                        LOGO
-                    </div>
-
-                    <div className='flex items-center space-x-3'>
-                        <a href='#'>
-                            <AiOutlineFacebook size={32} />
-                        </a>
-                        <a href="#">
-                            <AiOutlineInstagram size={32} />
-                        </a>
-                    </div>
-                </div>
-            </footer>
         </>
     )
 }
